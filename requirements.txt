@@ -4,3 +4,5 @@ scikit-image
 tensorflow
 numpy
 Pillow
+streamlit
+streamlit-cropper

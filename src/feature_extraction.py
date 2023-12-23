@@ -22,6 +22,13 @@ class MyResnet50:
         features = self.model.predict(x)
         return features
     
+    def extract_features1(self, img):
+        x = image.img_to_array(img)
+        x = np.expand_dims(x, axis=0)
+        x = resnet50.preprocess_input(x)
+        features = self.model.predict(x)
+        return features
+    
 class MyVGG16:
     def __init__(self):
         super().__init__()
@@ -30,6 +37,13 @@ class MyVGG16:
 
     def extract_features(self, img_path):
         img = image.load_img(img_path, target_size=(224, 224))
+        x = image.img_to_array(img)
+        x = np.expand_dims(x, axis=0)
+        x = vgg16.preprocess_input(x)
+        features = self.model.predict(x)
+        return features
+    
+    def extract_features1(self, img):
         x = image.img_to_array(img)
         x = np.expand_dims(x, axis=0)
         x = vgg16.preprocess_input(x)
