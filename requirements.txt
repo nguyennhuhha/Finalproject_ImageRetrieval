@@ -1,0 +1,6 @@
+faiss-cpu
+opencv-python
+scikit-image
+tensorflow
+numpy
+Pillow
