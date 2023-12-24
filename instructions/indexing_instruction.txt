@@ -6,3 +6,6 @@ python indexing.py --feature_extractor VGG16 --dataset oxford
 
 python indexing.py --feature_extractor Xception --dataset oxford
 python indexing.py --feature_extractor Xception --dataset paris
+
+python indexing.py --feature_extractor Efficient --dataset oxford
+python indexing.py --feature_extractor Efficient --dataset paris

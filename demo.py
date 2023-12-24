@@ -6,7 +6,7 @@ import os
 import streamlit as st
 from streamlit_cropper import st_cropper
 
-from src.feature_extraction import MyVGG16, MyResnet50, MyXception
+from src.feature_extraction import MyVGG16, MyResnet50, MyXception, MyEfficient
 
 st.set_page_config(layout="wide")
 
@@ -28,6 +28,8 @@ def retrieve_image(img, data,feature_extractor):
         extractor = MyResnet50()
     elif (feature_extractor == 'Xception'):
         extractor = MyXception()
+    elif (feature_extractor == 'Efficient'):
+        extractor = MyEfficient()
     
     if (data == 'Oxford'):
         image_root = './dataset/oxford'
@@ -41,7 +43,7 @@ def retrieve_image(img, data,feature_extractor):
 
     indexer = faiss.read_index(feature_root + feature_extractor + '.index.bin')
 
-    _, indices = indexer.search(feat, k=21)
+    _, indices = indexer.search(feat, k=11)
 
     return indices[0], image_root
 
@@ -57,7 +59,7 @@ def main():
         data = st.selectbox('Dataset', ( 'Paris', 'Oxford'))
 
         st.subheader('Choose feature extractor')
-        option = st.selectbox('Model', ( 'Resnet50', 'VGG16', 'Xception'))
+        option = st.selectbox('Model', ( 'Resnet50', 'VGG16', 'Xception', 'Efficient'))
 
         st.subheader('Upload image')
         img_file = st.file_uploader(label='', type=['png', 'jpg'])

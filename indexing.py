@@ -4,7 +4,7 @@ import numpy as np
 
 import faiss
 
-from src.feature_extraction import MyResnet50, MyVGG16, MyXception
+from src.feature_extraction import MyResnet50, MyVGG16, MyXception, MyEfficient
 from src.indexing_faiss import get_faiss_indexer
 from src.dataloader import MyDataLoader
 
@@ -31,6 +31,8 @@ def main():
         extractor = MyVGG16()
     elif (args.feature_extractor == 'Xception'):
         extractor = MyXception()
+    elif (args.feature_extractor == 'Efficient'):
+        extractor = MyEfficient()
     else:
         print("No matching model found")
         return

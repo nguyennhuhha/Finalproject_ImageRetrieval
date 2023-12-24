@@ -2,8 +2,8 @@ import numpy as np
 
 from keras.utils import img_to_array
 from keras.preprocessing import image
-from keras.applications import vgg16, resnet50, xception
-
+from keras.applications import vgg16, resnet50, xception, efficientnet_v2
+from keras.models import Model
 
 class MyResnet50:
     def __init__(self):
@@ -71,6 +71,35 @@ class MyXception:
         x = img_to_array(img)
         x = np.expand_dims(x, axis=0)
         x = xception.preprocess_input(x)
+
+        feature = self.model.predict(x)
+        feature = feature / np.linalg.norm(feature)  # Normalize
+        
+        return feature
+    
+class MyEfficient:
+    def __init__(self):
+        super().__init__()
+        base =  efficientnet_v2.EfficientNetV2L()
+        self.model = Model(inputs=base.input, outputs=base.get_layer('top_dropout').output)
+        self.shape = 1280 # the length of the feature vector
+
+    def extract_features(self, img_path):
+        img = image.load_img(img_path, target_size=(480, 480))
+        x = img_to_array(img)
+        x = np.expand_dims(x, axis=0)
+        x = efficientnet_v2.preprocess_input(x)
+
+        feature = self.model.predict(x)  # Predict with shape (1, 1280) 
+        feature = feature / np.linalg.norm(feature)  # Normalize
+
+        return feature
+    
+    def extract_features1(self, img):
+        img = img.resize((480, 480))
+        x = img_to_array(img)
+        x = np.expand_dims(x, axis=0)
+        x = efficientnet_v2.preprocess_input(x)
 
         feature = self.model.predict(x)
         feature = feature / np.linalg.norm(feature)  # Normalize
