@@ -1,7 +1,8 @@
 python indexing.py --feature_extractor VGG16 --dataset paris
-
 python indexing.py --feature_extractor Resnet50 --dataset paris
 
 python indexing.py --feature_extractor Resnet50 --dataset oxford
+python indexing.py --feature_extractor VGG16 --dataset oxford 
 
-python indexing.py --feature_extractor VGG16 --dataset oxford
+python indexing.py --feature_extractor Xception --dataset oxford
+python indexing.py --feature_extractor Xception --dataset paris

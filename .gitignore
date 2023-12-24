@@ -2,6 +2,7 @@ venv
 dataset/groundtruth/
 dataset/paris/
 dataset/oxford/
+dataset/trash/
 all_souls_000000.jpg
 paris_defense_000000.jpg
 test.py
