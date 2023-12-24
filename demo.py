@@ -21,7 +21,7 @@ def get_image_list(image_root):
             image_list.append(full_path)
     return image_list
 
-def retrieve_image(img, data,feature_extractor):
+def retrieve_image(img, data,feature_extractor,number_k):
     if (feature_extractor == 'VGG16'):
         extractor = MyVGG16()
     elif (feature_extractor == 'Resnet50'):
@@ -43,23 +43,23 @@ def retrieve_image(img, data,feature_extractor):
 
     indexer = faiss.read_index(feature_root + feature_extractor + '.index.bin')
 
-    _, indices = indexer.search(feat, k=11)
+    _, indices = indexer.search(feat, k=number_k)
 
     return indices[0], image_root
 
 def main():
-    st.title('CONTENT-BASED IMAGE RETRIEVAL')
+    st.title('IMAGE RETRIEVAL')
     
     col1, col2 = st.columns(2)
 
     with col1:
         st.header('QUERY')
 
-        st.subheader('Choose feature extractor')
-        data = st.selectbox('Dataset', ( 'Paris', 'Oxford'))
+        st.subheader('Choose dataset')
+        data = st.selectbox('', ( 'Paris', 'Oxford'))
 
         st.subheader('Choose feature extractor')
-        option = st.selectbox('Model', ( 'Resnet50', 'VGG16', 'Xception', 'Efficient'))
+        option = st.selectbox('', ( 'Resnet50', 'VGG16', 'Xception', 'Efficient'))
 
         st.subheader('Upload image')
         img_file = st.file_uploader(label='', type=['png', 'jpg'])
@@ -73,45 +73,35 @@ def main():
             st.write("Preview")
             _ = cropped_img.thumbnail((150,150))
             st.image(cropped_img)
+        
+        with st.form("query"):
+            number_k = st.text_input("Number of outcomes: ")
+            submitted = st.form_submit_button("Submit")
 
     with col2:
         st.header('RESULT')
-        if img_file:
-            st.markdown('**Retrieving .......**')
-            start = time.time()
+        if submitted:
+            if img_file:
+                st.markdown('**Retrieving .......**')
+                start = time.time()
 
-            retriev, image_root = retrieve_image(cropped_img, data, option)
-            image_list = get_image_list(image_root)
+                retriev, image_root = retrieve_image(cropped_img, data, option, int(number_k))
+                image_list = get_image_list(image_root)
 
-            end = time.time()
-            st.markdown('**Finish in ' + str(end - start) + ' seconds**')
+                end = time.time()
+                st.markdown('**Finish in ' + str(end - start) + ' seconds**')
 
-            col3, col4 = st.columns(2)
+                col3, col4 = st.columns(2)
 
-            with col3:
-                image = Image.open(image_list[retriev[0]])
-                st.image(image, use_column_width = 'always')
+                with col3:
+                    for i in range(0,int(number_k), 2):
+                        image = Image.open(image_list[retriev[i]])
+                        st.image(image, use_column_width = 'always')
 
-            with col4:
-                image = Image.open(image_list[retriev[1]])
-                st.image(image, use_column_width = 'always')
-
-            col5, col6, col7 = st.columns(3)
-
-            with col5:
-                for u in range(2, 11, 3):
-                    image = Image.open(image_list[retriev[u]])
-                    st.image(image, use_column_width = 'always')
-
-            with col6:
-                for u in range(3, 11, 3):
-                    image = Image.open(image_list[retriev[u]])
-                    st.image(image, use_column_width = 'always')
-
-            with col7:
-                for u in range(4, 11, 3):
-                    image = Image.open(image_list[retriev[u]])
-                    st.image(image, use_column_width = 'always')
+                with col4:
+                    for i in range(1,int(number_k), 2):
+                        image = Image.open(image_list[retriev[i]])
+                        st.image(image, use_column_width = 'always')
 
 if __name__ == '__main__':
     main()

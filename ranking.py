@@ -25,7 +25,6 @@ def main():
     parser = ArgumentParser()
     parser.add_argument("--feature_extractor", required=True, type=str, default='Resnet50')
     parser.add_argument("--dataset", required=True, type=str, default='paris')
-    # parser.add_argument("--device", required=False, type=str, default='cuda:0')
     parser.add_argument("--top_k", required=False, type=int, default=11)
     parser.add_argument("--crop", required=False, type=bool, default=False)
 
@@ -80,11 +79,7 @@ def main():
                 pil_image=pil_image.crop((float(left), float(top), float(right), float(bottom)))
                 path_crop = 'crop'
 
-            # image_tensor = transform(pil_image)
-            # image_tensor = image_tensor.unsqueeze(0).cpu()
-
             feat = extractor.extract_features1(pil_image)
-
 
             indexer = faiss.read_index(feature_root + '/' + args.feature_extractor + '.index.bin')
 
