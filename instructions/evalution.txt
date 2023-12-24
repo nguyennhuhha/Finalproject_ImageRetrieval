@@ -1,0 +1,51 @@
+Run with paris dataset:
+--crop:
+python ranking.py --feature_extractor Resnet50 --dataset paris --crop True
+python evaluating.py --feature_extractor Resnet50 --dataset paris --crop True
+
+--original:
+python ranking.py --feature_extractor Resnet50 --dataset paris 
+python evaluating.py --feature_extractor Resnet50 --dataset paris
+
+python ranking.py --feature_extractor VGG16 --dataset paris --crop True
+python evaluating.py --feature_extractor VGG16 --dataset paris --crop True
+
+python ranking.py --feature_extractor VGG16 --dataset paris 
+python evaluating.py --feature_extractor VGG16 --dataset paris
+
+python ranking.py --feature_extractor Xception --dataset paris --crop True
+python evaluating.py --feature_extractor Xception --dataset paris --crop True
+
+python ranking.py --feature_extractor Xception --dataset paris 
+python evaluating.py --feature_extractor Xception --dataset paris
+
+python ranking.py --feature_extractor Efficient --dataset paris --crop True
+python evaluating.py --feature_extractor Efficient --dataset paris --crop True
+
+python ranking.py --feature_extractor Efficient --dataset paris 
+python evaluating.py --feature_extractor Efficient --dataset paris
+
+Run with oxford dataset:
+python ranking.py --feature_extractor Resnet50 --dataset oxford --crop True
+python evaluating.py --feature_extractor Resnet50 --dataset oxford --crop True
+
+python ranking.py --feature_extractor Resnet50 --dataset oxford 
+python evaluating.py --feature_extractor Resnet50 --dataset oxford
+
+python ranking.py --feature_extractor VGG16 --dataset oxford --crop True
+python evaluating.py --feature_extractor VGG16 --dataset oxford --crop True
+
+python ranking.py --feature_extractor VGG16 --dataset oxford 
+python evaluating.py --feature_extractor VGG16 --dataset oxford
+
+python ranking.py --feature_extractor Xception --dataset oxford --crop True
+python evaluating.py --feature_extractor Xception --dataset oxford --crop True
+
+python ranking.py --feature_extractor Xception --dataset oxford 
+python evaluating.py --feature_extractor Xception --dataset oxford
+
+python ranking.py --feature_extractor Efficient --dataset oxford --crop True
+python evaluating.py --feature_extractor Efficient --dataset oxford --crop True
+
+python ranking.py --feature_extractor Efficient --dataset oxford 
+python evaluating.py --feature_extractor Efficient --dataset oxford
