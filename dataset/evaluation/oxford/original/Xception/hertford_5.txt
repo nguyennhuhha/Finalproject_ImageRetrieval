@@ -1,11 +1,11 @@
 hertford_000063
 hertford_000026
+new_000383
 new_000150
-oxford_002336
-oxford_002181
+hertford_000077
+oxford_001752
 bodleian_000226
-hertford_000123
-oxford_000556
+hertford_000062
+hertford_000027
+oxford_002336
 hertford_000116
-oxford_002085
-oxford_000865

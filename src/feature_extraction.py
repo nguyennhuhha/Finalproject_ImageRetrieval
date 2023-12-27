@@ -52,8 +52,8 @@ class MyVGG16:
 class MyXception:
     def __init__(self):
         super().__init__()
-        self.model = xception.Xception()
-        self.shape = 1000 # the length of the feature vector
+        self.model = xception.Xception(weights='imagenet', include_top=False, pooling='avg')
+        self.shape = 2048 # the length of the feature vector
 
     def extract_features(self, img_path):
         img = image.load_img(img_path, target_size=(299, 299))
@@ -61,7 +61,7 @@ class MyXception:
         x = np.expand_dims(x, axis=0)
         x = xception.preprocess_input(x)
 
-        feature = self.model.predict(x)  # Predict with shape (1, 1000) 
+        feature = self.model.predict(x)  # Predict with shape (1, 2048) 
         feature = feature / np.linalg.norm(feature)  # Normalize
 
         return feature
