@@ -48,7 +48,7 @@ def retrieve_image(img, data,feature_extractor,number_k):
     return indices[0], image_root
 
 def main():
-    # st.title('IMAGE RETRIEVAL')
+    st.title('IMAGE RETRIEVAL')
     
     with st.container():
         #st.header('QUERY')
@@ -94,7 +94,6 @@ def main():
                 for i in range(0, int(number_k), 1):
                     print(image_list[retriev[i]])
                 with col1: 
-                    st.write("Preview")
                     st.image(cropped_img)
                     st.markdown('**Finish in ' + str(end - start) + ' seconds**')
                     text_placeholder.empty()
