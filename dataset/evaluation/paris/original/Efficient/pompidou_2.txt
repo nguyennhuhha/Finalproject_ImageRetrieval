@@ -4,8 +4,8 @@ paris_pompidou_000426
 paris_pompidou_000434
 paris_pompidou_000161
 paris_pompidou_000661
-paris_pompidou_000719
 paris_pompidou_000432
-paris_pompidou_000700
+paris_pompidou_000719
+paris_pompidou_000643
 paris_pompidou_000578
-paris_pompidou_000650
+paris_pompidou_000700

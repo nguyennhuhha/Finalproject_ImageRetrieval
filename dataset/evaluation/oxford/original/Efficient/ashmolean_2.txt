@@ -8,4 +8,4 @@ ashmolean_000002
 bodleian_000187
 ashmolean_000016
 oxford_003587
-ashmolean_000305
+ashmolean_000106

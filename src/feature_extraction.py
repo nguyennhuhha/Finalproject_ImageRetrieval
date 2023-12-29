@@ -80,8 +80,9 @@ class MyXception:
 class MyEfficient:
     def __init__(self):
         super().__init__()
-        base =  efficientnet_v2.EfficientNetV2L()
-        self.model = Model(inputs=base.input, outputs=base.get_layer('top_dropout').output)
+        base =  efficientnet_v2.EfficientNetV2L(weights='imagenet', include_top=False, pooling='avg')
+        # self.model = Model(inputs=base.input, outputs=base.get_layer('top_dropout').output)
+        self.model = base
         self.shape = 1280 # the length of the feature vector
 
     def extract_features(self, img_path):

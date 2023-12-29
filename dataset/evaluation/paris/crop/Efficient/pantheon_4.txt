@@ -1,11 +1,11 @@
 paris_pantheon_000580
 paris_pantheon_000147
 paris_pantheon_000623
-paris_pantheon_000591
 paris_pantheon_000590
-paris_pantheon_000492
+paris_pantheon_000591
 paris_pantheon_000642
 paris_triomphe_000564
-paris_triomphe_000330
-paris_triomphe_000443
 paris_pantheon_000726
+paris_triomphe_001039
+paris_triomphe_001078
+paris_triomphe_000330
