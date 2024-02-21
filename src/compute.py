@@ -3,20 +3,21 @@ import os
 
 def compute_AP(pos_set, ranked_list):
     relevant = 0.0
-    average_precision = 0.0
+    total_precision = 0.0
     number_retrieve = 0
 
     for item in ranked_list:
         number_retrieve += 1
-        if item not in pos_set:
+        # rel(k): if the retrived image is flase => rel(k)=0, pass; if it's true => rel(k)=1
+        if item not in pos_set: 
             continue
         
         relevant += 1
-        average_precision += (relevant/number_retrieve)
+        total_precision += (relevant/number_retrieve)
 
     if relevant == 0:
         return 0
-    return average_precision / relevant
+    return total_precision / relevant
 
 def compute_mAP(feature_extractor, dataset, crop = False):
 

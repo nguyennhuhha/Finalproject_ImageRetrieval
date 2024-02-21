@@ -9,3 +9,7 @@ paris_defense_000499
 paris_defense_000385
 paris_pantheon_001077
 paris_defense_000594
+paris_defense_000162
+paris_general_003107
+paris_triomphe_000003
+paris_general_003139

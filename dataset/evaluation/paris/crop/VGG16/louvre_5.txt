@@ -9,3 +9,7 @@ paris_louvre_000186
 paris_louvre_000161
 paris_general_002224
 paris_louvre_000396
+paris_general_002073
+paris_louvre_000292
+paris_pantheon_000723
+paris_louvre_000299

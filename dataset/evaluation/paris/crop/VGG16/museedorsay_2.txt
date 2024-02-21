@@ -9,3 +9,7 @@ paris_invalides_000561
 paris_museedorsay_000737
 paris_pompidou_000384
 paris_notredame_000789
+paris_general_002362
+paris_notredame_000752
+paris_museedorsay_000757
+paris_moulinrouge_000849

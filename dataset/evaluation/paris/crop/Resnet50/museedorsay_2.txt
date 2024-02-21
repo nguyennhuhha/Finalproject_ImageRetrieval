@@ -9,3 +9,7 @@ paris_museedorsay_000198
 paris_pantheon_000897
 paris_museedorsay_000368
 paris_general_001431
+paris_notredame_000557
+paris_pantheon_000135
+paris_invalides_000603
+paris_invalides_000661

@@ -9,3 +9,7 @@ paris_notredame_000860
 paris_notredame_000467
 paris_notredame_000320
 paris_notredame_000179
+paris_sacrecoeur_000414
+paris_notredame_000390
+paris_sacrecoeur_000704
+paris_notredame_000352

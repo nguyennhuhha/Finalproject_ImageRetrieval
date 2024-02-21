@@ -9,3 +9,7 @@ paris_defense_000062
 paris_defense_000505
 paris_louvre_000328
 paris_louvre_000462
+paris_defense_000396
+paris_defense_000587
+paris_defense_000037
+paris_louvre_000454

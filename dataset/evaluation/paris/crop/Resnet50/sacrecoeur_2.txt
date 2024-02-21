@@ -9,3 +9,7 @@ paris_sacrecoeur_000608
 paris_sacrecoeur_000528
 paris_sacrecoeur_000306
 paris_sacrecoeur_000012
+paris_sacrecoeur_000494
+paris_sacrecoeur_000548
+paris_sacrecoeur_000004
+paris_sacrecoeur_000637

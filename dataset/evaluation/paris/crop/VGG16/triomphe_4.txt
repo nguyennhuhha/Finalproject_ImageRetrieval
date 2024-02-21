@@ -9,3 +9,7 @@ paris_triomphe_000713
 paris_triomphe_000735
 paris_triomphe_000007
 paris_triomphe_000149
+paris_triomphe_000493
+paris_triomphe_001074
+paris_triomphe_001091
+paris_triomphe_000463

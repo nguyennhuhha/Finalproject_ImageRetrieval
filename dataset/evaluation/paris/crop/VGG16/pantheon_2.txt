@@ -9,3 +9,7 @@ paris_pantheon_000389
 paris_pantheon_001127
 paris_pantheon_000279
 paris_pantheon_000496
+paris_pantheon_000222
+paris_pantheon_000892
+paris_pantheon_000557
+paris_pantheon_000889

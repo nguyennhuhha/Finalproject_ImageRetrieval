@@ -9,3 +9,7 @@ paris_defense_000516
 paris_sacrecoeur_000136
 paris_defense_000256
 paris_defense_000563
+paris_defense_000079
+paris_defense_000037
+paris_defense_000163
+paris_general_003113

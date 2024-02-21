@@ -9,3 +9,7 @@ paris_museedorsay_000807
 paris_museedorsay_001013
 paris_museedorsay_000004
 paris_museedorsay_001047
+paris_museedorsay_000366
+paris_invalides_000157
+paris_museedorsay_000370
+paris_museedorsay_000639

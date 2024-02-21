@@ -25,7 +25,7 @@ def main():
     parser = ArgumentParser()
     parser.add_argument("--feature_extractor", required=True, type=str, default='Resnet50')
     parser.add_argument("--dataset", required=True, type=str, default='paris')
-    parser.add_argument("--top_k", required=False, type=int, default=11)
+    parser.add_argument("--top_k", required=False, type=int, default=15)
     parser.add_argument("--crop", required=False, type=bool, default=False)
 
     print('Ranking .......')

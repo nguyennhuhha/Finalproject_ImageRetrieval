@@ -9,3 +9,7 @@ paris_defense_000334
 paris_defense_000456
 paris_defense_000030
 paris_defense_000080
+paris_defense_000385
+paris_defense_000037
+paris_defense_000093
+paris_defense_000609

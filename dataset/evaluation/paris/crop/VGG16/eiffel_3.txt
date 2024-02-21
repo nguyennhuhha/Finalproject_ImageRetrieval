@@ -9,3 +9,7 @@ paris_general_002985
 paris_eiffel_000177
 paris_general_002645
 paris_general_003149
+paris_general_002619
+paris_eiffel_000285
+paris_general_001728
+paris_general_002502

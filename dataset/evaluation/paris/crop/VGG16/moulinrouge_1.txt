@@ -9,3 +9,7 @@ paris_moulinrouge_000856
 paris_moulinrouge_000356
 paris_moulinrouge_000106
 paris_eiffel_000176
+paris_general_000226
+paris_moulinrouge_000600
+paris_moulinrouge_000640
+paris_moulinrouge_000251

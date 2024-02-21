@@ -9,3 +9,7 @@ paris_defense_000505
 paris_defense_000417
 paris_general_003139
 paris_defense_000079
+paris_general_002720
+paris_museedorsay_001035
+paris_defense_000499
+paris_general_001107

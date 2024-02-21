@@ -9,3 +9,7 @@ paris_invalides_000252
 paris_invalides_000457
 paris_invalides_000396
 paris_invalides_000198
+paris_invalides_000663
+paris_invalides_000786
+paris_invalides_000631
+paris_pantheon_000212

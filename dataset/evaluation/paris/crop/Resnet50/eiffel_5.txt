@@ -9,3 +9,7 @@ paris_general_001620
 paris_general_001919
 paris_general_002398
 paris_general_001930
+paris_general_000313
+paris_general_002619
+paris_general_002985
+paris_general_002641

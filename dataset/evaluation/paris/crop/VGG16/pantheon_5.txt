@@ -9,3 +9,7 @@ paris_pantheon_000567
 paris_pantheon_000874
 paris_pantheon_000389
 paris_pantheon_000585
+paris_museedorsay_000418
+paris_pantheon_000889
+paris_pantheon_000899
+paris_general_002917

@@ -9,3 +9,7 @@ paris_pompidou_000095
 paris_pompidou_000434
 paris_pompidou_000312
 paris_pompidou_000345
+paris_pompidou_000712
+paris_pompidou_000439
+paris_general_001926
+paris_pompidou_000499
